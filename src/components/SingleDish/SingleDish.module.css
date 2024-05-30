@@ -1,0 +1,85 @@
+.singleDish {
+    padding: 90px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s all;
+    width: 290px;
+    gap: 20px;
+}
+
+.singleDish:hover {
+    /* box-shadow: 1px 2px 23px rgba(0, 0, 0, 0.55); */
+    color: rgb(252, 102, 48);
+    transform: scale(1.02);
+}
+
+.singleDish__name {
+    font-weight: 600;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.singleDish__price {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    margin-top: 5px;
+}
+
+.singleDish__img {
+    width: 190px;
+    height: 130px;
+}
+
+.singleDish__price::after {
+    content: ' руб.';
+}
+
+.singleDish__btn {
+    border: 2px solid rgb(252, 102, 48);
+    color: rgb(252, 102, 48);
+    font-weight: 600;
+    padding: 12px 20px;
+    cursor: pointer;
+    background: none;
+    font-size: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: .3s all;
+}
+
+.singleDish__btn:hover,
+.singleDish__btn:active {
+    background-color: rgb(252, 102, 48);
+    color: white;
+}
+
+@media (max-width: 860px) {
+    .singleDish {
+        padding: 15px;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .singleDish__img {
+        width: 140px;
+        height: 100px;
+    }
+
+    .singleDish__name {
+        font-weight: 600;
+        font-size: 15px;
+        white-space: initial;
+        max-width: 100px;
+    }
+
+    .singleDish__btn {
+        padding: 8px 15px;
+    }
+}

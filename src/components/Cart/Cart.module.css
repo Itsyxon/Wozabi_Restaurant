@@ -1,0 +1,41 @@
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.actions {
+    margin-top: 50px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.closeButton {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+.buyButton {
+    border: 2px solid rgb(252, 102, 48);
+    color: rgb(252, 102, 48);
+    font-weight: 600;
+    padding: 12px 20px;
+    cursor: pointer;
+    background: none;
+    font-size: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: .3s all;
+}
+
+.buyButton:hover {
+    background-color: rgb(252, 102, 48);
+    color: white;
+}

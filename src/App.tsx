@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useContext, useState } from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import Dishes from './components/Dishes/Dishes';
+import Cart from './components/Cart/Cart';
+import CartContext from './context/CartContext';
+import Footer from './components/Footer/Footer';
 
 function App() {
+
+  const [cartIsVisible, setCartisVisible] = useState<boolean>(false)
+
+  const showCartHandler = () => {
+    setCartisVisible(true)
+  }
+
+  const hideCartHandler = () => {
+    setCartisVisible(false)
+  }
+
+  const CartUseContext = useContext(CartContext)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartContext.Provider value={CartUseContext}>
+      <div className="app">
+        {cartIsVisible && <Cart onHideCart={hideCartHandler} />}
+        <Header onShowCart={showCartHandler} />
+        <main>
+
+          <Dishes />
+        </main>
+        <Footer />
+      </div>
+    </CartContext.Provider>
   );
 }
 
