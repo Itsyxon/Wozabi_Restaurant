@@ -15,7 +15,7 @@ const Cart: React.FC<Props> = ({ onHideCart }: Props) => {
             </span>
             <div className={styles.total}>
                 <span>Итого: </span>
-                <span>1500 руб.</span>
+                <span>0 руб.</span>
             </div>
             <div className={styles.actions}>
                 <button className={styles.buyButton}>Оформить заказ</button>
